@@ -31,9 +31,11 @@ const SearchScreen = () => {
                 onTermSubmit={ ()=> searchApi() }
             />
             
-            return {errMsg.length > 0}
-            ? <Text>{errMsg}</Text>
-            : null
+            {
+                errMsg.length>0
+                ? <Text>{errMsg}</Text>
+                : null
+            }
 
             <Text>Search found = {results.length} results </Text>
         </View>
