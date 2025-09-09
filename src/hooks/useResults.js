@@ -17,15 +17,13 @@ export default () => {
             });
             setResults(response.data.businesses);   
         } catch (error) {
-            setErrMessage("Something went wrong");
+            setErrMessage("There was an error when accessing the API");
         }
     }
 
     useEffect(()=>{
         searchApi('american')
     }, [])
-
-    console.log(results.length);
 
     const filterResultByPrice = (price) => {
         return results.filter(result => {
