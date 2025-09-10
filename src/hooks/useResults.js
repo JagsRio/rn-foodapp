@@ -22,7 +22,7 @@ export default () => {
     }
 
     useEffect(()=>{
-        searchApi('american')
+        searchApi('chinese')
     }, [])
 
     const filterResultByPrice = (price) => {
