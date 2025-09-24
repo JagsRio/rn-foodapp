@@ -4,11 +4,14 @@ import { useNavigation } from '@react-navigation/native';
 
 const SingleResult = ( {result} ) =>{
 
+    if (!result){
+        return null;
+    }
     const navigation = useNavigation();
 
     const handlePress = () => {
         navigation.navigate('Details', {
-          itemId: result.id,
+          id: result.id,
           otherParam: 'anything you want here',
         });
       };
@@ -33,7 +36,7 @@ const styles = StyleSheet.create({
         marginLeft:15, marginRight:15,marginBottom:15
     },
     imgStyle:{
-        height:120, width:180,
+        height:120, width:180, borderRadius:10,
     },
     nameStyle:{
         fontSize:18, fontWeight:'bold',
